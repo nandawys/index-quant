@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2026-11-04 · 股指期货量化系统每日复盘</title>
+<style>:root{
+  --bg:#0f1419;--card:#1a2332;--border:#2a3544;--text:#e7ecf3;--muted:#8b9bb4;
+  --accent:#3b82f6;--ok:#22c55e;--ok-bg:#12261c;--ok-bd:#1e4d36;
+  --watch:#f59e0b;--watch-bg:#2a2110;--watch-bd:#5c4518;
+  --danger:#ef4444;--table-head:#151c27;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.65;font-size:15.5px;
+}
+.wrap{max-width:820px;margin:0 auto;padding:24px 16px 56px}
+a{color:var(--accent)}
+.topnav{margin-bottom:18px;font-size:.9rem}
+.topnav a{text-decoration:none}
+header h1{font-size:1.45rem;margin:0 0 6px;font-weight:700}
+header .sub{color:var(--muted);margin:0 0 14px;font-size:.92rem}
+.badge{
+  display:inline-block;padding:3px 10px;border-radius:999px;font-size:.78rem;font-weight:650;
+  background:#1e3a5f;color:#93c5fd;margin-right:6px;
+}
+.disclaimer{
+  padding:12px 14px;border:1px solid var(--border);border-radius:10px;
+  background:#151c27;color:var(--muted);font-size:.88rem;margin-bottom:28px;
+}
+h2{
+  font-size:1.12rem;margin:32px 0 12px;padding-bottom:8px;
+  border-bottom:1px solid var(--border);font-weight:700;
+}
+h3{font-size:1rem;margin:20px 0 10px;font-weight:650}
+p,li{color:var(--text)}
+.muted{color:var(--muted)}
+.lead{font-size:.98rem;margin:0 0 16px}
+table{
+  width:100%;border-collapse:collapse;font-size:.9rem;margin:10px 0 16px;
+  background:var(--card);border-radius:10px;overflow:hidden;border:1px solid var(--border);
+}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:var(--table-head);color:var(--muted);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.chart{
+  display:block;width:100%;max-width:100%;height:auto;border-radius:12px;
+  border:1px solid var(--border);margin:12px 0 8px;background:#111;
+}
+.cap{font-size:.8rem;color:var(--muted);margin:0 0 18px}
+.grid{display:grid;gap:14px}
+@media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr}}
+.cmd{
+  border-radius:14px;padding:16px 16px 14px;border:1px solid var(--border);
+  background:var(--card);margin-bottom:14px;
+}
+.cmd.open{border-color:var(--ok-bd);background:linear-gradient(180deg,var(--ok-bg),var(--card))}
+.cmd.watch{border-color:var(--watch-bd);background:linear-gradient(180deg,var(--watch-bg),var(--card))}
+.cmd .head{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:10px}
+.cmd .name{font-size:1.05rem;font-weight:700;margin:0}
+.pill{
+  font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:999px;letter-spacing:.02em;
+}
+.pill.open{background:#14532d;color:#86efac}
+.pill.watch{background:#78350f;color:#fcd34d}
+.pill.alt{background:#1e3a5f;color:#93c5fd}
+.kv{width:100%;border:none;background:transparent;margin:0}
+.kv th,.kv td{border:none;border-bottom:1px dashed #2a3544;padding:8px 0;background:transparent}
+.kv th{width:5.5em;color:var(--muted);font-weight:600}
+.kv tr:last-child th,.kv tr:last-child td{border-bottom:none}
+.rules{
+  padding:14px 16px;border-radius:12px;border:1px solid var(--border);
+  background:var(--card);margin:10px 0;
+}
+.rules ul{margin:8px 0 0;padding-left:1.2em}
+.rules li{margin:6px 0}
+.evidence{
+  padding:14px 16px;border-radius:12px;border:1px solid #1e3a5f;
+  background:#121a28;margin:12px 0 18px;
+}
+.evidence h3{margin-top:0}
+footer{margin-top:36px;padding-top:14px;border-top:1px solid var(--border);color:var(--muted);font-size:.8rem}
+.strong{font-weight:650;color:#fff}
+.list{display:flex;flex-direction:column;gap:12px}
+.card{display:block;padding:16px 18px;border:1px solid var(--border);border-radius:12px;background:var(--card);text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card .date{font-size:.82rem;color:var(--accent);font-weight:600;margin-bottom:4px}
+.card .title{font-size:1.05rem;font-weight:650;margin:0 0 6px;border:none;padding:0}
+.card .meta{font-size:.88rem;color:var(--muted);margin:0}
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:#1e3a2f;color:#86efac;margin-left:8px}
+table{display:table}
+@media(max-width:600px){table{font-size:.82rem}th,td{padding:8px 6px}}
+</style></head><body><div class="wrap">
+<div class="topnav"><a href="../index.html">← 复盘首页</a></div>
+<header><h1>股指期货量化系统 · 每日复盘</h1>
+<p class="sub">交易日 <strong>2026-11-04（周三）</strong> · 下一交易日 <strong>2026-11-05（周四）</strong></p>
+<span class="badge">主策略 PF-K（IM）</span><span class="badge">启动前一日</span></header>
+<div class="disclaimer"><strong>免责声明</strong>：独立量化系统的研究复盘，仅供参考学习，不构成投资建议，不代下单。期货有杠杆，可能亏损超过预期，行动与盈亏由你本人承担。</div>
+
+<div class="cmd open"><div class="head"><span class="pill open">明日指令</span><h3 class="name">启动前一日：明天（2026-11-05（周四））开多 1 手 IM（中证1000股指期货主力）</h3></div>
+<table class="kv"><tbody>
+<tr><th>做什么</th><td><strong>开多 1 手</strong> —— 做多（赌继续涨）</td></tr>
+<tr><th>怎么下单</th><td>明早 <strong>9:25 集合竞价 / 9:30 开盘</strong> 以市价或对价成交（规则=按开盘价成交）。<br>
+<span class="muted">参考：若开盘≈今日收盘 6469.2，成交价≈<strong>6469.2</strong></span></td></tr>
+<tr><th>止损价</th><td><strong>成交价 − 338.0 点</strong>；示例：按 6469.2 成交 → 止损 <strong>6131.2</strong>（盘中触及即平）</td></tr>
+<tr><th>止盈</th><td>不设止盈，让利润跑</td></tr>
+<tr><th>最多拿几天</th><td>3 个交易日（含开仓当天）：最晚 <strong>2026-11-09（周一） 收盘前（14:55–15:00）平仓</strong></td></tr>
+<tr><th>最坏一笔</th><td>止损约亏 338.0 点 × 200 元 = <strong>约 6.8 万元/手</strong>（另加费用滑点；跳空过止损会亏更多）</td></tr></tbody></table></div>
+
+<h2>一、今天发生了什么</h2>
+<p class="lead">IM（中证1000股指期货主连）今天开 6180.0、最高 6509.6、最低 6151.2、收 <strong>6469.2</strong>，
+比昨天收盘 6173.8 <strong>涨 295.4 点（+4.78%）</strong>。开盘相对昨收 高开 6.2 点，开盘后先下探到 6151.2，随后一路拉升，收在接近最高点的位置。</p>
+<div class="rules"><ul><li>系统今天没有持仓、没有开仓也没有平仓（纸面）。</li><li>纸面模拟账户尚未启动（11/05 开盘起记账），今天不计盈亏。</li></ul></div>
+<img class="chart" src="../assets/2026-11-04/im_price_z.png" alt="IM 近100日K线与zSAS">
+<p class="cap">上：IM 近 100 个交易日 K 线和系统历史开平仓点；下：每日 zSAS，越过虚线就出信号。</p>
+
+<h2>二、为什么出这个信号（白话版）</h2>
+<p>今天收盘后算出 <strong>zSAS = 2.40</strong>，高于做多线 +1.25。</p>
+<div class="rules"><ul>
+<li><b>它在看什么</b>：今天这根K线的涨跌，相对「平时一天能波动多少」（ATR）有多猛；同时扣掉「开盘跳空」那部分——靠隔夜跳空涨上去的不算数，盘中一路买上去的才算。</li>
+<li><b>怎么算</b>：SAS = 0.55 × 今日涨跌幅/ATR比例 − 0.35 × 异常跳空；再和过去 60 天比，变成 zSAS（高出平时几个标准差）。</li>
+<li><b>怎么用</b>：zSAS ≥ +1.25 → 今天涨得「比平常猛得多」且不是靠跳空 → 系统认为短期惯性会延续，次日开盘做多；≤ −1.25 反过来做空；中间不动。</li>
+<li><b>今天</b>：开盘只高开 6.2 点，涨幅主要是盘中走出来的，所以 zSAS 很高。</li>
+</ul></div>
+
+<h2>三、明天具体怎么挂单</h2>
+<p>规则只有一条：<b>次日开盘价成交</b>。所以明早 9:25 集合竞价或 9:30 开盘用市价/对价跟进即可；止损价按你的<b>实际成交价</b>算。</p>
+
+<table><thead><tr><th>假如明早开盘价是…</th><th class="num">你的成交价≈</th><th class="num">止损价（=成交价−338.0）</th></tr></thead>
+<tbody><tr><td>低开 0.3×ATR</td><td class="num">6401.6</td><td class="num"><strong>6063.6</strong></td></tr><tr><td>平开（=今日收盘）</td><td class="num">6469.2</td><td class="num"><strong>6131.2</strong></td></tr><tr><td>高开 0.3×ATR</td><td class="num">6536.8</td><td class="num"><strong>6198.8</strong></td></tr><tr><td>高开 0.6×ATR</td><td class="num">6604.4</td><td class="num"><strong>6266.4</strong></td></tr></tbody></table>
+<p class="cap">ATR 取回测同口径（信号日的 atr14_prev）= 225.3 点；止损距离 1.5×ATR = 338.0 点；价格按最小变动 0.2 点取整。</p>
+<div class="evidence"><h3>执行提醒（执行建议，未回测）</h3><ul>
+<li>只在开盘这一刻跟；<b>开盘没成交就放弃本笔，不在盘中追高/追低挂天价单</b>。回测只验证过「开盘价成交」。</li>
+<li>止损单可在成交后立刻挂条件单（多单：最新价 ≤ 止损价 触发卖出平仓）。若开盘就跳空越过止损，按开盘价离场（回测同样处理）。</li>
+<li>第3天收盘前没止损，就在尾盘平掉；中间不加仓、不移动止损。</li>
+</ul></div>
+
+<h2>四、纸面模拟账户（11/05 起 · 初始50万 · 每笔1手）</h2>
+<img class="chart" src="../assets/2026-11-04/ledger.png" alt="纸面账户净值曲线">
+<table><tbody>
+<tr><td>当前净值</td><td class="num"><strong>500,000 元</strong></td><td>收益率 <strong>+0.00%</strong> · 最大回撤 0.00%</td></tr>
+<tr><td>已实现 / 浮动盈亏</td><td class="num">+0 / +0 元</td><td>已平仓 0 笔 · 胜率 — · 已付费用滑点约 0 元</td></tr>
+</tbody></table>
+<p class="muted">流水：暂无成交（账户 2026-11-05 开盘起按 PF-K 规则执行；开仓价=当日日线开盘价，日线更新后自动记账）。</p>
+<p class="cap">口径：只跟主策略 PF-K（IM，每笔 1 手）。成交价=日线开盘价/止损价/第3天收盘价；费用=开·平昨万0.23（平今万2.3）+ 往返滑点0.4点；持仓中的浮盈已预扣平仓费用。纸面记账，非真实成交。</p>
+
+<h2>五、历史成绩（样本外，费后）</h2>
+<img class="chart" src="../assets/2026-11-04/oos_equity.png" alt="样本外权益 vs 中证1000">
+<p class="cap">「样本外」= 2025-06-03 之后的数据，参数是在那之前就定死的，这段相当于「模拟实战」。图为 2手/100万 口径累计收益率，对比同期中证1000指数。</p>
+
+<table><thead><tr><th>指标（样本外 2025-06-03 → 2026-11-04，费后）</th><th class="num">回测口径 2手/100万</th><th class="num">重算 1手/50万</th></tr></thead><tbody>
+<tr><td>交易笔数 / 胜率</td><td class="num">44 笔 / 61.4%</td><td class="num">44 笔 / 61.4%</td></tr>
+<tr><td>累计盈利</td><td class="num">+48.0 万元</td><td class="num">+24.0 万元</td></tr>
+<tr><td>策略年化（单利口径）</td><td class="num">+33.8%</td><td class="num">+33.8%</td></tr>
+<tr><td>中证1000 同期年化</td><td class="num">+5.1%</td><td class="num">+5.1%</td></tr>
+<tr><td><strong>超额年化</strong>（策略−指数）</td><td class="num"><strong>+28.6%</strong></td><td class="num">+28.6%</td></tr>
+<tr><td>2025年（6/3起）：策略 / 指数 / 超额</td><td class="num" colspan="2">+33.6% / +25.1% / +8.4%</td></tr>
+<tr><td>2026年至今：策略 / 指数 / 超额</td><td class="num" colspan="2">+14.4% / -16.0% / +30.4%</td></tr>
+</tbody></table>
+<p class="cap">「1手/50万」是把同一批成交按 1 手、50万本金重算：金额减半、收益率相同（因为仓位和本金同比例缩小）。年化=总收益÷年数（单利）。
+数字由冻结参数实时重算。与存档 summary.json（2026-11-04）对照：存档 44 笔 / 胜率 61.4% / 超额年化 28.64%。</p>
+
+<h2>六、风险提示</h2>
+<div class="rules"><ul>
+<li><b>历史 ≠ 未来</b>：样本外只有 44 笔，统计上仍偏薄；任何一段连亏都可能发生。</li>
+<li><b>参数偏脆</b>：持有天数只有 H≈3 天附近站得住，邻域诊断里：持有 2 天时超额年化只剩约 +3%~+4%；持有 4–5 天虽然总数更好看，但 2025 年行情上涨段会明显跑输指数（攻防不再两全）。12 个邻近参数里只有 H=3 的 3 格「攻防两全」——所以严格按 3 天执行，不要自作主张拿更久或更短。</li>
+<li><b>单笔最大亏损</b>：止损 1.5×ATR = 338.0 点 × 200 元/点 ≈ <b>6.8 万元/手</b>（另加费用滑点；跳空越过止损时会更多）。50万账户单笔最坏约 13.5%。</li>
+<li>IM 一手合约价值约 129 万元（价格×200），保证金只占其中一部分，杠杆高，账户资金要留足以免被强平。</li>
+<li>不叠加：持仓期间出现的新信号不接；平仓当天出现的信号也不接（与回测一致）。</li>
+</ul></div>
+
+
+<h2>附：卫星策略 PF-K-IC（中证500股指期货 IC）</h2>
+<div class="rules"><p style="margin:0">同一套指标用在 IC 上，但参数单独冻结：阈值 ±1.5、止损 1.5×ATR、最多拿 5 天。<b>不计入上面的纸面模拟账户</b>，仅供对照。</p>
+<p style="margin:8px 0 0">今日 IC 收 6578.8（+295.0 点）。<strong>明日参考开多</strong>（zSAS=2.63 ≥ 1.5）。开盘成交；止损=成交价−318.6 点（示例：按收盘 6578.8 成交 → 止损 6260.2）；最多持有 5 个交易日，最晚 2026-11-11（周三） 收盘前平。</p>
+<p class="cap" style="margin:8px 0 0">样本外（2手/100万口径）：29 笔，胜率 58.6%，超额年化 vs 中证500 +14.3%。</p></div>
+
+<h2>七、术语小词典</h2>
+<table><tbody>
+<tr><td>ATR</td><td>平均真实波幅（14日），代表「这个品种平时一天大概波动多少点」。今天用于止损的 ATR = 225.3 点。</td></tr>
+<tr><td>zSAS</td><td>系统的核心指标：今天「盘中走出来的涨跌」比过去 60 天平均水平高出几个标准差。±1.25 是开仓线。</td></tr>
+<tr><td>样本外</td><td>定参数时没用过的数据。在样本外还能赚钱，才说明不是「拟合历史」。本系统切点 2025-06-03。</td></tr>
+<tr><td>止损</td><td>预先定好的认错价格，价格碰到就平仓离场，控制单笔最大亏损。</td></tr>
+<tr><td>对价</td><td>买入挂卖一价、卖出挂买一价，保证立刻成交。</td></tr>
+</tbody></table>
+
+<h2>数据与缺口</h2>
+<ul class="muted"><li>今日无数据缺口。</li><li>数据：IM0/IC0 主连日线（v2/*_raw.csv）、中证1000/500 指数日线；参数冻结 PF-K_q1.25_s1.5_RNone_H3 / PF-K-IC_q1.5_s1.5_RNone_H5，未调参。</li></ul>
+<footer>生成：2026-11-04 23:11（北京时间）· 仓库 nandawys/index-quant · 研究参考，不代下单</footer>
+</div></body></html>
