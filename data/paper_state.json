@@ -51,5 +51,70 @@
       "wr": null,
       "fees_yuan": 0
     }
+  },
+  "2026-11-05": {
+    "PF_K_IM": {
+      "close": 6605.0,
+      "zsas": 1.2849,
+      "atr": 234.83,
+      "action_next": null,
+      "blocked": "系统仍在持仓中，按回测约定不叠加新仓",
+      "status": "持仓中",
+      "hold": {
+        "side": "多",
+        "entry_date": "2026-11-05",
+        "entry_price": 6423.0,
+        "stop": 6085.02,
+        "target": null,
+        "held_days": 1,
+        "remain_days": 2,
+        "max_hold": 3,
+        "signal_date": "2026-11-04",
+        "signal_value": null,
+        "last_day": "2026-11-09 00:00:00",
+        "float_pts": 182.0
+      },
+      "closed_today": [],
+      "plan": null
+    },
+    "PF_K_IC": {
+      "close": 6703.6,
+      "zsas": 1.3843,
+      "atr": 223.25,
+      "action_next": null,
+      "blocked": null,
+      "status": "持仓中",
+      "hold": {
+        "side": "多",
+        "entry_date": "2026-11-05",
+        "entry_price": 6515.0,
+        "stop": 6196.41,
+        "target": null,
+        "held_days": 1,
+        "remain_days": 4,
+        "max_hold": 5,
+        "signal_date": "2026-11-04",
+        "signal_value": null,
+        "last_day": "2026-11-11 00:00:00",
+        "float_pts": 188.60000000000036
+      },
+      "closed_today": [],
+      "plan": null
+    },
+    "ledger": {
+      "start": "2026-11-05",
+      "capital": 500000.0,
+      "lots": 1,
+      "asof": "2026-11-05",
+      "equity": 536260.0,
+      "ret_pct": 7.251999999999992,
+      "mdd_pct": 0.0,
+      "realized": 0,
+      "floating": 36260.0712,
+      "n_closed": 0,
+      "wins": 0,
+      "wr": null,
+      "fees_yuan": 0
+    }
   }
 }
