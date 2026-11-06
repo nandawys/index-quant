@@ -3,12 +3,12 @@
     "start": "2026-11-05",
     "capital": 500000.0,
     "lots": 1,
-    "asof": "2026-11-05",
-    "equity": 536260.0,
-    "ret_pct": 7.251999999999992,
-    "mdd_pct": 0.0,
+    "asof": "2026-11-06",
+    "equity": 507421.0,
+    "ret_pct": 1.4842000000000022,
+    "mdd_pct": -5.377801812553617,
     "realized": 0,
-    "floating": 36260.0712,
+    "floating": 7420.734520000036,
     "n_closed": 0,
     "wins": 0,
     "wr": null,
@@ -22,14 +22,14 @@
       "entry": 6423.0,
       "exit_day": null,
       "exit": null,
-      "mark": 6605.0,
+      "mark": 6460.8,
       "stop": 6085.02,
-      "reason": "已持1天/最多3天",
-      "bars": 1,
-      "gross_pts": 182.0,
-      "fee_pts": 0.699644,
-      "net_pts": 181.300356,
-      "net_yuan": 36260.0712,
+      "reason": "已持2天/最多3天",
+      "bars": 2,
+      "gross_pts": 37.80000000000018,
+      "fee_pts": 0.6963274,
+      "net_pts": 37.10367260000018,
+      "net_yuan": 7420.734520000036,
       "lots": 1
     }
   ],
@@ -39,6 +39,12 @@
       "realized": 0,
       "floating": 36260.0,
       "equity": 536260.0
+    },
+    {
+      "date": "2026-11-06",
+      "realized": 0,
+      "floating": 7421.0,
+      "equity": 507421.0
     }
   ]
 }
