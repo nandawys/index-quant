@@ -1,2 +1,3 @@
-status,side,entry_day,entry,exit_day,exit,reason,bars,gross_pts,fee_pts,net_pts,net_yuan,lots
-已平仓,多,2026-11-05,6423.0,2026-11-09,6448.6,时间退出,3,25.6,0.696,24.904,4980.8,1
+status,side,entry_day,entry,exit_day,exit,reason,bars,gross_pts,fee_pts,net_pts,net_yuan,lots,mark,stop
+已平仓,多,2026-11-05,6423.0,2026-11-09,6448.6,时间退出,3,25.6,0.696,24.904,4980.8,1,,
+持仓中,空,2026-11-16,6215.0,,,已持1天/最多3天,1,110.0,0.68336,109.31664,21863.328,1,6105.0,6537.23
