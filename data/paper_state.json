@@ -940,5 +940,59 @@
       "wr": 66.66666666666666,
       "fees_yuan": 647.2
     }
+  },
+  "2026-11-27": {
+    "PF_K_IM": {
+      "close": 5959.0,
+      "zsas": 3.3843,
+      "atr": 237.84,
+      "action_next": null,
+      "blocked": "今天刚平仓，按回测约定平仓当日的信号不接",
+      "status": "空仓",
+      "hold": null,
+      "closed_today": [
+        {
+          "side": "空",
+          "entry": 5513.2,
+          "exit": 5855.95,
+          "reason": "止损",
+          "net_pts": -343.411
+        }
+      ],
+      "plan": null
+    },
+    "PF_K_IC": {
+      "close": 6325.2,
+      "zsas": 4.0847,
+      "atr": 216.89,
+      "action_next": "long",
+      "blocked": null,
+      "status": "待开仓",
+      "hold": null,
+      "closed_today": [],
+      "plan": {
+        "side": "long",
+        "entry_day": "2026-11-30",
+        "last_day": "2026-12-04",
+        "risk_pts": 325.3,
+        "ex_open": 6325.2,
+        "ex_stop": 5999.8
+      }
+    },
+    "ledger": {
+      "start": "2026-11-05",
+      "capital": 500000.0,
+      "lots": 1,
+      "asof": "2026-11-27",
+      "equity": 419163.0,
+      "ret_pct": -16.167399999999997,
+      "mdd_pct": -23.83908860483497,
+      "realized": -80837.4,
+      "floating": 0,
+      "n_closed": 4,
+      "wins": 2,
+      "wr": 50.0,
+      "fees_yuan": 779.4000000000001
+    }
   }
 }
